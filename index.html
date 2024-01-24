@@ -1,0 +1,145 @@
+<!-- 
+Sc Ori: https://www.wendycode.com/2021/05/membuat-widget-chatbox-whatsapp.html
+
+
+Edit Full Modifikasi + Icon Profil By ArdaStore
+ 28 Oct - 29 Oct
+ 23:43 - 10:00
+ Oct 2022
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>𝐀𝐁𝐎𝐔𝐓 𝐀𝐑𝐃𝐀</title>
+  <meta name="description" content="Ａ𝚛𝚍𝚊 𝚂𝚝𝚘𝚛𝚎">
+  <meta property="og:title" content="Arda Saha" />
+  <meta property="og:description" content="Ａｒｄａ亗">
+  <meta property="og:image" content="https://telegra.ph/file/f97752d1ec9700b63c84e.jpg">
+  <link rel="shortcut icon" href="https://telegra.ph/file/f97752d1ec9700b63c84e.jpg" type="image/x-icon" />
+  <script async='async' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js'></script>
+
+<!-- 
+  Made with love by Ardaa!
+
+     Blog: https://ardaganz.blogspot.com
+     Web: https://bit.ly/AboutArda
+     Instagram: @ardasaha10
+     TikTok: @ardasaha
+     Email: ardasemua@gmail.com
+
+  Thanks to all <3
+-->
+	
+	
+	
+
+<style>
+
+/* Chatbox Whatsapp */
+:root {
+--warna-background: #e21c1c; /*#f89000;  Warna background header dan tombol chat */
+--warna-icon: #fff; /* Warna icon chat */
+--lebar-chatbox: 320px;
+--font: 'Sans-serif';
+}
+
+
+	body{-webkit-font-smoothing:antialiased;position:relative;top:0 !important;margin:0;padding:0!important;width:100%;font-family:var(--fontB);font-size:14px;color:#48525c;background:#fbfeff;-webkit-font-smoothing:antialiased} 
+	
+	
+  
+/* CSS Chatbox Whatsapp By Jago Desain And Redesign By Wendy Code */
+svg{width:22px;height:22px;vertical-align:middle;fill:#fff}
+.chatMenu,.chatButton .svg-2{display:none}
+
+a#send-it{color:#555;width:55px;margin:5px;font-weight:700;padding:10px;background:#f0f5fb;border-radius:15px 3px 15px 15px;text-decoration:none}
+a#send-it:hover{opacity:.8}
+.chatStart input[type="text"]{padding:10px;margin:0;width:80%;border:none;color:var(--warna-background)}
+.chatStart input[type="text"]:focus{outline:none}
+.chatMenu{display:none}
+.chatButton{position:fixed;background-color:var(--warna-background);bottom:20px;right:20px;border-radius:50px;z-index:20;overflow:hidden;display:flex;align-items:center;justify-content:center;width:50px;height:50px;-webkit-transition:all .2s ease-out;transition:all .2s ease-out}
+.chatButton svg{margin:auto;fill:var(--warna-icon)}
+.chatButton svg.svg-2{display:none}
+  
+.chatBox{position:fixed;bottom:70px;right:20px;width:320px;-webkit-transition:all .2s ease-out;transition:all .2s ease-out;
+z-index:21;opacity:0;visibility:hidden;line-height:normal}
+.chatContent{border-radius:15px;background-color:#fff;box-shadow:0 5px 15px 0 rgba(0,0,0,.05);overflow:hidden}
+.chatHeader{position:relative;display:flex;align-items:center;padding:15px 20px;background-color:var(--warna-background);overflow:hidden}
+.chatHeader img{border-radius:100%;width:50px;float:left;margin: -2px 10px 0 0;     /*NEW*/ background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);-webkit-background-clip: text;-webkit-text-fill-color: transparent;animation: animate 1.5s linear infinite;}
+@keyframes animate {100%{ filter: hue-rotate(360deg);}}
+/*Message header*/.chatHeader .chatTitle{padding-left:16px;font-family:var(--font);font-size:14px;font-weight:700;color:#fff}
+/*Message info*/.chatHeader .chatTitle span{font-family:var(--font);font-size:11.5px;display:block;line-height:1.58em}
+/*Online info*/.chatHeader:before{content:"";bottom:14;right:0;width:12px;height:12px;box-sizing:border-box;background-color:#4dc247;display:block;position:absolute;z-index:10;border-radius:100%;border:2px solid var(--warna-background);left:55px;}
+
+/*message left*/.chatText{display:flex;flex-wrap:wrap;margin:25px 20px;font-family:var(--font);font-size:12px;color:#505050}
+.chatText span{display:inline-block;margin-right:auto;padding:10px 10px 10px 20px;background-color:#f0f5fb;border-radius:3px 15px 15px}
+/*Read*/.chatText span:after{content:'Baru Saja';margin-left:15px;font-family:var(--font);font-size:9px;color:#989b9f}
+.chatText span.typing{margin:15px 0 0 auto;padding:10px 20px 10px 10px;border-radius:15px 3px 15px 15px}
+.chatText span.typing:after{display:none}
+  
+/*Send*/.chatBox .chatStart{display:flex;align-items:center;margin-top:15px;padding:18px 20px;border-radius:10px;background-color:#fff;overflow:hidden;font-family:var(--font);font-size:12px;color:#505050}
+.chatMenu:checked + .chatButton{-webkit-transform: rotate(360deg);transform: rotate(360deg)}
+.chatMenu:checked + .chatButton svg.svg-1{display:none}
+.chatMenu:checked + .chatButton svg.svg-2{display:block}
+.chatMenu:checked ~ .chatBox{bottom:90px;opacity:1;visibility:visible}
+
+@media screen and (max-width:800px){.chatButton{bottom:8.5rem;right:1rem}
+.chatMenu:checked+.chatButton{bottom:25.5rem}
+.chatMenu:checked ~ .chatBox{bottom:5rem}
+}
+
+
+
+</style>
+</head>
+<body>
+
+
+
+
+
+
+
+
+
+  <!--[ WHATSAPP ARDA ]-->
+  <input class='chatMenu hidden' id='offchatMenu' type='checkbox'/>
+  <label class='chatButton' for='offchatMenu'>
+  <svg class='svg-1' viewBox='0 0 32 32'><g><path d='M16,2A13,13,0,0,0,8,25.23V29a1,1,0,0,0,.51.87A1,1,0,0,0,9,30a1,1,0,0,0,.51-.14l3.65-2.19A12.64,12.64,0,0,0,16,28,13,13,0,0,0,16,2Zm0,24a11.13,11.13,0,0,1-2.76-.36,1,1,0,0,0-.76.11L10,27.23v-2.5a1,1,0,0,0-.42-.81A11,11,0,1,1,16,26Z'></path><path d='M19.86,15.18a1.9,1.9,0,0,0-2.64,0l-.09.09-1.4-1.4.09-.09a1.86,1.86,0,0,0,0-2.64L14.23,9.55a1.9,1.9,0,0,0-2.64,0l-.8.79a3.56,3.56,0,0,0-.5,3.76,10.64,10.64,0,0,0,2.62,4A8.7,8.7,0,0,0,18.56,21a2.92,2.92,0,0,0,2.1-.79l.79-.8a1.86,1.86,0,0,0,0-2.64Zm-.62,3.61c-.57.58-2.78,0-4.92-2.11a8.88,8.88,0,0,1-2.13-3.21c-.26-.79-.25-1.44,0-1.71l.7-.7,1.4,1.4-.7.7a1,1,0,0,0,0,1.41l2.82,2.82a1,1,0,0,0,1.41,0l.7-.7,1.4,1.4Z'></path></g></svg>
+  <svg class='svg-2' viewBox='0 0 512 512'><path d='M278.6 256l68.2-68.2c6.2-6.2 6.2-16.4 0-22.6-6.2-6.2-16.4-6.2-22.6 0L256 233.4l-68.2-68.2c-6.2-6.2-16.4-6.2-22.6 0-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3l68.2 68.2-68.2 68.2c-3.1 3.1-4.7 7.2-4.7 11.3 0 4.1 1.6 8.2 4.7 11.3 6.2 6.2 16.4 6.2 22.6 0l68.2-68.2 68.2 68.2c6.2 6.2 16.4 6.2 22.6 0 6.2-6.2 6.2-16.4 0-22.6L278.6 256z'></path></svg>
+  </label>
+
+  <div class='chatBox'>
+  <div class='chatContent'>
+  <div class='chatHeader'>
+  <img src='https://telegra.ph/file/228d664c532fe79da5c90.jpg' alt="Arda Store"/>
+  <div class='chatTitle'>Arda Store <span>Biasanya membalas dalam satu jam</span></div>
+  </div>
+  <div class='chatText'>
+  <span>Halo, Ada yang bisa kami bantu?</span>
+  <span class='typing'>...</span>
+  </div>
+  </div>
+  <div class='chatStart'><input type='text' id='chatInput' placeholder='ketikan pesan di sini'/>
+  <a href='javascript:void;' id='send-it'>Kirim</a>
+  </div>
+  </div>
+  
+  <script>
+//<![CDATA[
+//jQuery Widget Chat Box Whatsapp By Wendy Code
+var _0x3debf5=_0x1c53;(function(_0x3e8a21,_0x45f319){var _0x4fbc65=_0x1c53,_0xca1183=_0x3e8a21();while(!![]){try{var _0x5762ca=parseInt(_0x4fbc65(0xb1))/0x1+-parseInt(_0x4fbc65(0xaf))/0x2+-parseInt(_0x4fbc65(0xa8))/0x3+parseInt(_0x4fbc65(0xa3))/0x4+-parseInt(_0x4fbc65(0x9e))/0x5*(-parseInt(_0x4fbc65(0xa4))/0x6)+parseInt(_0x4fbc65(0xa2))/0x7+-parseInt(_0x4fbc65(0xaa))/0x8;if(_0x5762ca===_0x45f319)break;else _0xca1183['push'](_0xca1183['shift']());}catch(_0x5a63a8){_0xca1183['push'](_0xca1183['shift']());}}}(_0x543b,0xa08cf),$(_0x3debf5(0xa5))[_0x3debf5(0xac)](whatsappchat));function _0x543b(){var _0x124e96=['val','location','754824udbmdq','%0A%0A','9360816cLPMPR','6281370126262','click','https://web.whatsapp.com/send','userAgent','96050JaaRrj','test','586445HzNKmW','&text=','35gkvuLe','href','#chatInput','Di\x20kirim\x20via\x20:\x20','4452252zyDSYi','927584QYNvUX','576834FxEVzt','#send-it'];_0x543b=function(){return _0x124e96;};return _0x543b();}function _0x1c53(_0x198ae6,_0x33265a){var _0x543b2d=_0x543b();return _0x1c53=function(_0x1c53c6,_0x2d43d0){_0x1c53c6=_0x1c53c6-0x9d;var _0x296edc=_0x543b2d[_0x1c53c6];return _0x296edc;},_0x1c53(_0x198ae6,_0x33265a);}function whatsappchat(){var _0x2db830=_0x3debf5,_0xe1abe2=_0x2db830(0xad),_0x428a44=_0x2db830(0xab);if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i[_0x2db830(0xb0)](navigator[_0x2db830(0xae)]))var _0xe1abe2='whatsapp://send';var _0x34ce82=$(_0x2db830(0xa0))[_0x2db830(0xa6)](),_0x18391b=location['href'],_0x30e736=_0xe1abe2+'?phone='+_0x428a44+_0x2db830(0x9d)+_0x34ce82+_0x2db830(0xa9)+_0x2db830(0xa1)+_0x18391b;window['open'](_0x30e736,'_blank'),window[_0x2db830(0xa7)][_0x2db830(0x9f)]=_0x18391b;}
+///]]>
+</script>
+
+
+    
+
+
+</body>
+</html>

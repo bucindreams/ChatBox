@@ -1,0 +1,56 @@
+
+/* Chatbox Whatsapp */
+:root {
+--warna-background: #e21c1c; /*#f89000;  Warna background header dan tombol chat */
+--warna-icon: #fff; /* Warna icon chat */
+--lebar-chatbox: 320px;
+--font: 'Sans-serif';
+}
+
+
+	
+.chatMenu,.chatButton .svg-2{display:none}
+
+a#send-it{color:#555;width:55px;margin:5px;font-weight:700;padding:10px;background:#f0f5fb;border-radius:15px 3px 15px 15px;text-decoration:none}
+a#send-it:hover{opacity:.8}
+.chatStart input[type="text"]{padding:10px;margin:0;width:80%;border:none;background:#f0f5fb;color:var(--linkB)}
+.chatStart input[type="text"]:focus{outline:none}
+.chatMenu{display:none}
+.chatButton{position:fixed;background-color:var(--linkB);bottom:20px;right:20px;border-radius:50px;z-index:20;overflow:hidden;display:flex;align-items:center;justify-content:center;width:45px;height:45px;-webkit-transition:all .2s ease-out;transition:all .2s ease-out}
+.chatButton svg{display:block;width:2rem;height:2rem;margin:auto;fill:var(--warna-icon)}
+.chatButton svg.svg-2{display:none}
+
+.chatBox{position:fixed;bottom:70px;right:20px;width:320px;-webkit-transition:all .2s ease-out;transition:all .2s ease-out;
+z-index:21;opacity:0;visibility:hidden;line-height:normal}
+.chatContent{border-radius:15px;background-color:#fff;box-shadow:0 5px 15px 0 rgba(0,0,0,.05);overflow:hidden}
+.chatHeader{position:relative;display:flex;align-items:center;padding:15px 20px;background-color:var(--linkB);overflow:hidden}
+.chatHeader img{border-radius:100%;width:50px;float:left;margin: -2px 10px 0 0;     /*NEW*/ background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);-webkit-background-clip: text;-webkit-text-fill-color: transparent;animation: animate 1.5s linear infinite;}
+@keyframes animate {100%{ filter: hue-rotate(360deg);}}
+/*Message header*/.chatHeader .chatTitle{padding-left:16px;font-family:var(--font);font-size:14px;font-weight:700;color:#fff}
+/*Message info*/.chatHeader .chatTitle span{font-family:var(--font);font-size:11.5px;display:block;line-height:1.58em}
+/*Online info*/.chatHeader:before{content:"";bottom:14;right:0;width:12px;height:12px;box-sizing:border-box;background-color:#4dc247;display:block;position:absolute;z-index:10;border-radius:100%;border:2px solid var(--linkB);bottom:1em; left:60px;}
+
+/*message left*/.chatText{display:flex;flex-wrap:wrap;margin:25px 20px;font-family:var(--font);font-size:12px;color:#505050}
+.chatText span{display:inline-block;margin-right:auto;padding:10px 10px 10px 20px;background-color:#f0f5fb;border-radius:3px 15px 15px}
+/*Read*/.chatText span:after{content:'Baru Saja';margin-left:15px;font-family:var(--font);font-size:9px;color:#989b9f}
+.chatText span.typing{margin:15px 0 0 auto;padding:10px 20px 10px 10px;border-radius:15px 3px 15px 15px}
+.chatText span.typing:after{display:none}
+  
+/*Send*/.chatBox .chatStart{display:flex;align-items:center;margin-top:20px;padding:18px 20px;border-radius:10px;background-color:#fff;overflow:hidden;font-family:var(--font);font-size:12px;color:#505050}
+.chatMenu:checked + .chatButton{-webkit-transform: rotate(360deg);transform: rotate(360deg)}
+.chatMenu:checked + .chatButton svg.svg-1{display:none}
+.chatMenu:checked + .chatButton svg.svg-2{display:block}
+.chatMenu:checked ~ .chatBox{bottom:90px;opacity:1;visibility:visible}
+
+@media screen and (max-width:800px){
+.chatButton{bottom:7.5rem;right:20px}
+.chatMenu:checked+.chatButton{bottom:25.5rem}
+.chatMenu:checked ~ .chatBox{bottom:5rem}
+}
+
+/*Dark Mode*/
+.drK .chatStart input[type="text"]{color:var(--darkU);}
+.drK .chatButton{background-color:var(--darkU);}
+.drK .chatHeader{background-color:var(--darkU);}
+.drK .chatHeader:before{border:2px solid var(--darkU);}
+

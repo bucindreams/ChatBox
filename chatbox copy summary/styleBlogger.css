@@ -1,0 +1,62 @@
+:root {
+ /*#f89000;  Warna background header dan tombol chat */
+--warna-icon: #fff; /* Warna icon chat */
+--lebar-chatbox: 320px;
+--font: 'Sans-serif';
+}
+
+
+  
+/* CSS Multiple Whatsapp Chat */
+#whatsapp-chat{position:fixed;background:#fff;width:350px;border-radius:10px;box-shadow:0 1px 15px rgba(32,33,36,.28);bottom:90px;right:30px;overflow:hidden;z-index:99;animation-name:bounceInUp;animation-duration:1s;transform:scale(1);font-family:'Quicksand',-apple-system,BlinkMacSystemFont,'Segoe UI','Oxygen-Sans','Helvetica Neue',Arial,sans-serif;}
+/* Ori
+a.petikduashow-chat{background:linear-gradient(to right top,#6f96f3,#2196f3);color:#fff;position:fixed;z-index:98;bottom:25px;right:30px;font-size:15px;padding:10px 20px;border-radius:50px;box-shadow:0 1px 15px rgba(32,33,36,.28)}
+a.petikduashow-chat i{transform:scale(1.2);margin:0 10px 0 0}
+*/
+a.petikduashow-chat{position:fixed;background-color:var(--linkB);bottom:7.0rem;right:20px;border-radius:50px;z-index:20;overflow:hidden;display:flex;align-items:center;justify-content:center;width:45px;height:45px;-webkit-transition:all .2s ease-out;transition:all .2s ease-out}
+a.petikduashow-chat svg{display:block;width:2rem;height:2rem;margin:auto;fill:var(--warna-icon)}
+.header-chat{background-color:rgb(33,150,243);background-image:linear-gradient(110deg,rgba(255,255,255,0.1) 16%,rgba(255,255,255,0.1) 17%,rgba(255,255,255,0.05) 17%,rgba(255,255,255,0.05) 23%,transparent 8.5%,transparent 78%,rgba(255,255,255,0.05) 78%,rgba(255,255,255,0.05) 84%,rgba(255,255,255,0.1) 84%,rgba(255,255,255,0.1));color:#fff;padding:20px}
+.header-chat h3{margin:0 0 10px}
+.header-chat h4{font-size:14px;line-height:1.7;margin:0}
+.header-chat a{color:#2196f3;background:white;border-radius:50px;padding:0 5px 2px 5px;}
+.info-avatar{position:relative}
+.info-avatar img{border-radius:100%;width:50px;float:left;margin:0 10px 0 0}
+.info-avatar:before{position: absolute;top:30px;left:30px;content:'';display:inline-block;width:22px;height:22px;vertical-align:middle;background:var(--linkB) url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16.75,13.96C17,14.09 17.16,14.16 17.21,14.26C17.27,14.37 17.25,14.87 17,15.44C16.8,16 15.76,16.54 15.3,16.56C14.84,16.58 14.83,16.92 12.34,15.83C9.85,14.74 8.35,12.08 8.23,11.91C8.11,11.74 7.27,10.53 7.31,9.3C7.36,8.08 8,7.5 8.26,7.26C8.5,7 8.77,6.97 8.94,7H9.41C9.56,7 9.77,6.94 9.96,7.45L10.65,9.32C10.71,9.45 10.75,9.6 10.66,9.76L10.39,10.17L10,10.59C9.88,10.71 9.74,10.84 9.88,11.09C10,11.35 10.5,12.18 11.2,12.87C12.11,13.75 12.91,14.04 13.15,14.17C13.39,14.31 13.54,14.29 13.69,14.13L14.5,13.19C14.69,12.94 14.85,13 15.08,13.08L16.75,13.96M12,2A10,10 0 0,1 22,12A10,10 0 0,1 12,22C10.03,22 8.2,21.43 6.65,20.45L2,22L3.55,17.35C2.57,15.8 2,13.97 2,12A10,10 0 0,1 12,2M12,4A8,8 0 0,0 4,12C4,13.72 4.54,15.31 5.46,16.61L4.5,19.5L7.39,18.54C8.69,19.46 10.28,20 12,20A8,8 0 0,0 20,12A8,8 0 0,0 12,4Z' fill='%23fff'/%3E%3C/svg%3E") center/ 14px no-repeat;border-radius: 15px;}
+a.informasi{padding:20px;display:block;overflow:hidden;animation-name:showhide;animation-duration:1.2s}
+a.informasi:hover{background:#f1f1f1}
+.info-chat span{display:block}
+#get-label,span.chat-label{font-size:12px;color:#888}
+#get-nama,span.chat-nama{margin:5px 0 0;font-size:15px;font-weight:700;color:#222}
+#get-label,#get-nama{color:#fff}
+span.my-number{display:none}
+.petikdua-msg{color:#2196f3;padding:20px;font-size:12.5px;text-align:center;border-top:1px solid rgba(0,0,0,0.05)}
+textarea#chat-input{width:100%;height:20px;outline:none;resize:none;border:none;border-radius:50px;background:transparent;padding:3px 10px;font-family:'Quicksand',-apple-system,BlinkMacSystemFont,'Segoe UI','Oxygen-Sans','Helvetica Neue',Arial,sans-serif;box-shadow:0 1px 2px rgba(32,33,36,.28);font-size:14px}
+.first-msg{padding:30px;text-align:center}
+.first-msg span{background:#e2e2e2;color:#333;font-size:14.2px;line-height:1.7;border-radius:10px;padding:15px 20px;display:inline-block}
+.start-chat .petikdua-msg{display:flex}
+#get-number{display:none}
+a.close-chat{position:absolute;top:10px;right:15px}
+a.close-chat svg{width:25px;height:25px}
+a.close-chat svg path{fill:rgba(255,255,255,.75)}
+@keyframes showhide{from{transform:scale(.5);opacity:0}
+}
+@-webkit-keyframes bounceInUp{from,60%,75%,90%,to{-webkit-animation-timing-function:cubic-bezier(0.215,0.610,0.355,1.000);animation-timing-function:cubic-bezier(0.215,0.610,0.355,1.000)}
+from{opacity:0;-webkit-transform:translate3d(0,3000px,0);transform:translate3d(0,3000px,0)}
+60%{opacity:1;-webkit-transform:translate3d(0,-20px,0);transform:translate3d(0,-20px,0)}
+75%{-webkit-transform:translate3d(0,10px,0);transform:translate3d(0,10px,0)}
+90%{-webkit-transform:translate3d(0,-5px,0);transform:translate3d(0,-5px,0)}
+to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+}
+@keyframes bounceInUp{from,60%,75%,90%,to{-webkit-animation-timing-function:cubic-bezier(0.215,0.610,0.355,1.000);animation-timing-function:cubic-bezier(0.215,0.610,0.355,1.000)}
+from{opacity:0;-webkit-transform:translate3d(0,3000px,0);transform:translate3d(0,3000px,0)}
+60%{opacity:1;-webkit-transform:translate3d(0,-20px,0);transform:translate3d(0,-20px,0)}
+75%{-webkit-transform:translate3d(0,10px,0);transform:translate3d(0,10px,0)}
+90%{-webkit-transform:translate3d(0,-5px,0);transform:translate3d(0,-5px,0)}
+to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}
+}
+@media screen and (max-width:480px){#whatsapp-chat{width:auto;left:15px;right:15px;font-size:80%}
+}
+.hide{display:none;animation-name:showhide;animation-duration:1.5s;transform:scale(1);opacity:1}
+.show{display:block;animation-name:showhide;animation-duration:1.5s;transform:scale(1);opacity:1}
+a#send-it svg{width:28px;height:28px;margin:-1px 0 0 5px}
+a#send-it svg path{fill:#2196f3}
